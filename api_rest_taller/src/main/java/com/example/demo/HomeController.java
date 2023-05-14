@@ -21,9 +21,9 @@ public class HomeController {
 	}
 	
 	@GetMapping(value="/coste/{matricula}")
-	public int coste(@PathVariable(value="matricula") String matricula) {
+	public double coste(@PathVariable(value="matricula") String matricula) {
 		
-		int coste = dao.consultamatricula(matricula);
+		double coste = dao.consultamatricula(matricula);
 		return coste;
 		
 	}
