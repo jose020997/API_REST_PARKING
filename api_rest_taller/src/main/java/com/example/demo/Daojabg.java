@@ -66,4 +66,9 @@ private JdbcTemplate jdbctemplate;
 		  
 		return coste;
 	}
+	
+	public void modificar(String matricula, String modifica) {
+		String sql = "Update datos set entrada=? where matricula = ?";
+		jdbctemplate.update(sql, modifica, matricula);
+	}
 }
